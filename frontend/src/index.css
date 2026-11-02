@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --page: #f4f4f1;
+  --surface: #fcfcfb;
+  --surface-2: #f4f4f1;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #6f6e69;
+  --line: #e1e0d9;
+  --axis: #c3c2b7;
+  --nav: #14181d;
+  --nav-ink: #c3c2b7;
+  --nav-active: #262c34;
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --band: rgba(235, 104, 52, 0.16);
+  --up: #d03b3b;
+  --down: #2a78d6;
+  --flag-wash: rgba(208, 59, 59, 0.12);
+  --gap-wash: rgba(137, 135, 129, 0.18);
+  --good: #0ca30c;
+  --warning: #b97f00;
+  --serious: #d4622f;
+  --critical: #d03b3b;
+  --seq-0: #cde2fb;
+  --seq-1: #9ec5f4;
+  --seq-2: #6da7ec;
+  --seq-3: #3987e5;
+  --seq-4: #256abf;
+  --seq-5: #184f95;
+  --seq-6: #0d366b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --surface-2: #232322;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #989690;
+    --line: #2c2c2a;
+    --axis: #383835;
+    --nav: #111110;
+    --nav-active: #232322;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --band: rgba(217, 89, 38, 0.22);
+    --up: #e66767;
+    --down: #3987e5;
+    --flag-wash: rgba(230, 103, 103, 0.18);
+    --gap-wash: rgba(137, 135, 129, 0.22);
+    --warning: #fab219;
+    --serious: #ec835a;
+    --critical: #e66767;
+    --seq-0: #104281;
+    --seq-1: #1c5cab;
+    --seq-2: #2a78d6;
+    --seq-3: #5598e7;
+    --seq-4: #86b6ef;
+    --seq-5: #b7d3f6;
+    --seq-6: #cde2fb;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.control {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.control:hover {
+  background: var(--surface-2);
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--series-1);
+  outline-offset: 2px;
+}
